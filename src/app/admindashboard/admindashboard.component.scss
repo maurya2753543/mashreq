@@ -1,0 +1,35 @@
+.flex-container {
+  padding: 8px;
+  display: flex;
+  flex: 100%;
+}
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+
+
+
+.flex-container > div {
+  margin: 8px;
+
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex: 25%;
+}
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: Montserrat, sans-serif;
+}
+.createdatabase {
+  background-color: coral;
+  color: #fff;
+
+}

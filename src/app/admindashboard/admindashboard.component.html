@@ -1,0 +1,18 @@
+
+<section class="flex-container ">
+  <div
+    *ngFor="let item of database"
+     >
+    <mat-card class="column mat-card" >
+    {{item.name}}
+
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-card class="column mat-card" (click)="openDialog()" class="createdatabase">
+      Create New Index
+
+    </mat-card>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+  <section class="formSection">
+  <div class="formGroup" *ngFor="let form of forms; let lastItem = last, let formIndex = index;">
+    <div class="formRow">
+      <div class="formCol">
+        <mat-form-field appearance="outline">
+          <mat-label>Field Name</mat-label>
+          <input
+            matInput
+            placeholder="Typing...."
+            [(ngModel)]="form.FieldName"
+            autocomplete="off"
+
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="formCol">
+        <mat-form-field appearance="outline">
+          <mat-label>Data Type</mat-label>
+          <mat-select
+            [(ngModel)]="form.DataType"
+            (selectionChange)="onTypeSelection($event, form)"
+            [ngModelOptions]="{standalone: true}"
+              >
+            <mat-option *ngFor="let item of typeList" [value]="item.key">
+              {{ item.value }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="formCol"  >
+        <button mat-icon-button *ngIf="lastItem" (click)="onNewField()" color="primary" >
+          <mat-icon>add_circle</mat-icon>
+        </button>
+        <button mat-icon-button (click)="removeList(formIndex)" *ngIf="forms   && forms.length > 0"  color="warn">
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <app-sub-createform [forms]="form.children"></app-sub-createform>
+  </div>
+</section>
