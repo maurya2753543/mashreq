@@ -12,14 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SubCreateformComponent } from './createform/sub-createform/sub-createform.component';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  // ...
-} from '@angular/animations';
+import {SubmissionService} from './submission.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +35,7 @@ import {
 
   ],
 
-  providers: [] ,
+  providers: [SubmissionService] ,
   entryComponents: [DialogComponent, CreateformComponent],
   bootstrap: [AppComponent]
 })

@@ -8,7 +8,8 @@ import { from } from 'rxjs';
 const routes: Routes = [
   { path : '' , redirectTo : 'dashboard', pathMatch : 'full' },
   { path : 'dashboard' , component: AdmindashboardComponent },
-  { path : 'form' , component: CreateformComponent }
+  { path : 'form/:name' , component: CreateformComponent , pathMatch: 'full'}
+
 
 ];
 

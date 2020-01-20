@@ -1,6 +1,6 @@
 import { Component, OnInit , Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-
+import { Router , ActivatedRoute} from '@angular/router';
 export interface DialogData {
   name: string;
   keytype: string;
@@ -15,7 +15,9 @@ export interface DialogData {
 })
 export class DialogComponent implements OnInit {
 
-  constructor( public dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+
+
+  constructor( public dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData)  { }
 
   ngOnInit() {
   }
@@ -23,5 +25,8 @@ export class DialogComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+
+
 
 }

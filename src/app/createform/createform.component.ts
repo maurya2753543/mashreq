@@ -1,5 +1,6 @@
 import { Component ,  OnInit} from '@angular/core';
-
+import { SubmissionService } from 'src/app/submission.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-createform',
   templateUrl: './createform.component.html',
@@ -8,10 +9,12 @@ import { Component ,  OnInit} from '@angular/core';
 })
 export class CreateformComponent implements OnInit  {
 
-constructor() {
+constructor(private dataService: SubmissionService,
+            private route: ActivatedRoute,
+            private router: Router) {
 
 }
-
+private indexname = this.route.snapshot.paramMap.get('name');
 formObj = [{
  FieldName: '' ,
  DataType: '' ,
@@ -26,6 +29,14 @@ console.log('formObj' , this.formObj);
 
 onSubmit() {
 
+}
+
+loadData() {
+
+  this.dataService.saveData( `index/insert${this.indexname}` , this.formObj ).subscribe((res) => {
+    console.log(res);
+
+  });
 }
 
 }

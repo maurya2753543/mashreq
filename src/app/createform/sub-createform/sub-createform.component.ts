@@ -1,12 +1,22 @@
-import { Component, OnInit , Input } from '@angular/core';
+import { Component, OnInit , Input , OnDestroy } from '@angular/core';
+import {Subscription, from} from 'rxjs';
+
+
 
 @Component({
   selector: 'app-sub-createform',
   templateUrl: './sub-createform.component.html',
   styleUrls: ['./sub-createform.component.scss']
 })
-export class SubCreateformComponent implements OnInit {
-  @Input() forms: any;
+export class SubCreateformComponent implements OnInit , OnDestroy {
+
+
+
+      @Input() forms: any;
+
+  constructor( ) {
+
+  }
 
   typeList = [
     { key: 'int' , value: 'int'},
@@ -22,7 +32,6 @@ export class SubCreateformComponent implements OnInit {
   ];
 
 ngOnInit() {
-
 }
 onTypeSelection(event: any , obj: any) {
 if (event.value === 'nested') {
@@ -51,7 +60,17 @@ public removeList( index: number ): void {
 
 }
 
+loadData() {
+  this.dataService.getData('').subscribe((res) => {
+    console.log(res);
 
+  });
+}
+
+
+ngOnDestroy(): void {
+  throw new Error('Method not implemented.');
+}
 
 
 }
