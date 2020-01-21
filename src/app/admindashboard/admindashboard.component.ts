@@ -2,6 +2,7 @@ import { Component, OnInit , Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
+import { SubmissionService } from '../submission.service';
 
 export interface DialogData {
   name: string;
@@ -19,14 +20,7 @@ export class AdmindashboardComponent implements OnInit {
 
   database: any;
 
-  constructor(public dialog: MatDialog ) {
-     this.database = [
-
-      { id : 0 , name : 'Database'},
-      { id : 1 , name : 'Mashreq'},
-      { id : 2 , name : 'Puresoftware'},
-      { id : 3 , name : 'KMS Data'}
-     ];
+  constructor(public dialog: MatDialog ,  private dataService: SubmissionService, ) {
   }
 
   openDialog(): void {
@@ -43,5 +37,15 @@ export class AdmindashboardComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  getValue() {
+
+      this.dataService.getData( 'index/getindex' ).subscribe((res) => {
+      this.database = res;
+
+    });
+  }
+
+
 
 }

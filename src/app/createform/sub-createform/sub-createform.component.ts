@@ -20,7 +20,7 @@ export class SubCreateformComponent implements OnInit , OnDestroy {
 
   typeList = [
     { key: 'int' , value: 'int'},
-    {key: 'string' , value: 'String'},
+    {key: 'text' , value: 'Text'},
     {key: 'nested' , value: 'Nested'},
     {key: 'boolean'  , value : 'Boolean'},
     {key: 'binary'  , value : 'Binary'},
@@ -54,18 +54,15 @@ onNewField() {
 
 }
 // I remove the pet at the given index.
-public removeList( index: number ): void {
+public removeList( index: number ) {
+
+
 
   this.forms.splice( index, 1 );
 
+
 }
 
-loadData() {
-  this.dataService.getData('').subscribe((res) => {
-    console.log(res);
-
-  });
-}
 
 
 ngOnDestroy(): void {

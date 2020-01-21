@@ -5,7 +5,7 @@
     <input matInput [(ngModel)]="data.name">
   </mat-form-field>
 </div>
-<div mat-dialog-actions><a [routerLink]="['/form',data.name]">
-  <button mat-button (click)="onNoClick()" class="cancel-button">cancel</button>
-  <button mat-button [mat-dialog-close]="data.name" cdkFocusInitial class="submit-button" >Submit</button></a>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()" class="cancel-button">cancel</button>
+  <button mat-button [mat-dialog-close]="data.name"  [routerLink]="['/form',data.name]" cdkFocusInitial class="submit-button" >Submit</button>
 </div>

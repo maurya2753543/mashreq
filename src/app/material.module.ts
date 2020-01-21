@@ -9,6 +9,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const MaterialComponent = [
   MatButtonModule,
@@ -21,7 +23,9 @@ const MaterialComponent = [
   MatSelectModule,
   MatTreeModule,
   MatFormFieldModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSnackBarModule,
+  ReactiveFormsModule
 
 
 ];
