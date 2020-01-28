@@ -36,6 +36,7 @@ export class AdmindashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getValue();
   }
 
   getValue() {

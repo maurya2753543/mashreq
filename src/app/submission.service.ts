@@ -16,8 +16,10 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SubmissionService {
+  [x: string]: any;
 
   baseUrl = environment.baseUrl;
+  isAuthenticated$: any;
 
 
   constructor(private httpClient: HttpClient) { }

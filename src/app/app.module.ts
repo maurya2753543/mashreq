@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubCreateformComponent } from './createform/sub-createform/sub-createform.component';
 import {SubmissionService} from './submission.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import {SubmissionService} from './submission.service';
 
   ],
 
-  providers: [SubmissionService] ,
+  providers: [SubmissionService ] ,
   entryComponents: [DialogComponent, CreateformComponent],
   bootstrap: [AppComponent]
 })

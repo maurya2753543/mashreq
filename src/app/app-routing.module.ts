@@ -5,10 +5,12 @@ import {CreateformComponent} from './createform/createform.component';
 import {HeaderComponent} from './header/header.component';
 import { from } from 'rxjs';
 
+
 const routes: Routes = [
   { path : '' , redirectTo : 'dashboard', pathMatch : 'full' },
   { path : 'dashboard' , component: AdmindashboardComponent },
-  { path : 'form/:name' , component: CreateformComponent , pathMatch: 'full'}
+  { path : 'form/:name/:action' , component: CreateformComponent  },
+  {path: '**', redirectTo: 'dashboard' }
 
 
 ];

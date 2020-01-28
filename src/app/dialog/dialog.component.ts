@@ -8,6 +8,7 @@ export interface DialogData {
   keytype: string;
   alterEgo?: string;
   id: number;
+  action: any;
 
 }
 

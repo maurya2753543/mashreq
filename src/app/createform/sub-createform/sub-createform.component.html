@@ -2,14 +2,14 @@
   <div class="formGroup" *ngFor="let form of forms; let lastItem = last, let formIndex = index;">
     <div class="formRow">
       <div class="formCol">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" >
           <mat-label>Field Name</mat-label>
           <input
             matInput
             placeholder="Typing...."
             [(ngModel)]="form.FieldName"
             autocomplete="off"
-
+            [disabled]="action == 'view'"
           />
         </mat-form-field>
       </div>
@@ -21,6 +21,7 @@
             [(ngModel)]="form.DataType"
             (selectionChange)="onTypeSelection($event, form)"
             [ngModelOptions]="{standalone: true}"
+            [disabled]="action == 'view'"
               >
             <mat-option *ngFor="let item of typeList" [value]="item.key">
               {{ item.value }}
@@ -29,7 +30,7 @@
         </mat-form-field>
       </div>
 
-      <div class="formCol"  >
+      <div class="formCol" *ngIf="action == 'add'">
         <button mat-icon-button *ngIf="lastItem" (click)="onNewField()" color="primary" >
           <mat-icon>add_circle</mat-icon>
         </button>
@@ -39,6 +40,6 @@
       </div>
     </div>
 
-    <app-sub-createform [forms]="form.children"></app-sub-createform>
+    <app-sub-createform [forms]="form.children" [action]="action"></app-sub-createform>
   </div>
 </section>

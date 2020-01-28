@@ -8,18 +8,20 @@ import {Subscription, from} from 'rxjs';
   templateUrl: './sub-createform.component.html',
   styleUrls: ['./sub-createform.component.scss']
 })
-export class SubCreateformComponent implements OnInit , OnDestroy {
+export class SubCreateformComponent implements OnInit {
 
 
 
       @Input() forms: any;
+
+      @Input() action: string;
 
   constructor( ) {
 
   }
 
   typeList = [
-    { key: 'int' , value: 'int'},
+    {key: 'integer' , value: 'Integer'},
     {key: 'text' , value: 'Text'},
     {key: 'nested' , value: 'Nested'},
     {key: 'boolean'  , value : 'Boolean'},
@@ -61,12 +63,6 @@ public removeList( index: number ) {
   this.forms.splice( index, 1 );
 
 
-}
-
-
-
-ngOnDestroy(): void {
-  throw new Error('Method not implemented.');
 }
 
 

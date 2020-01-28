@@ -1,7 +1,8 @@
 <section class="nestedform">
-  <mat-card  >
-  <app-sub-createform  [forms]="formObj" >  </app-sub-createform>
-  <button mat-flat-button color = "primary"   (click) = "loadData()" class="submit-button">Submit</button>
+  <mat-card>
+  <app-sub-createform  [forms]="formObj" [action]="action">  </app-sub-createform>
+  <button mat-flat-button color="primary" *ngIf="action == 'add'"  (click) = "indexdata()" class="submit-button">Submit</button>
+
   </mat-card>
 
 </section>
