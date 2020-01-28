@@ -11,6 +11,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 const MaterialComponent = [
   MatButtonModule,
@@ -25,7 +27,8 @@ const MaterialComponent = [
   MatFormFieldModule,
   MatTooltipModule,
   MatSnackBarModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  MatCheckboxModule
 
 
 ];

@@ -23,7 +23,8 @@ public action = this.route.snapshot.paramMap.get('action');
 formObj = [{
  FieldName: '' ,
  DataType: '' ,
- children: []
+ children: [],
+ IsSearchable: false
 
 }];
 
@@ -47,7 +48,8 @@ modifyFormData(obj: any) {
       const fieldObj = {
         FieldName:  prop,
         DataType: obj[prop].type,
-        children: []
+        children: [],
+    //    IsSearchable: obj[prop].IsSearchable
       };
       if (obj[prop].type === 'nested') {
         fieldObj.children = this.modifyFormData(obj[prop].properties);

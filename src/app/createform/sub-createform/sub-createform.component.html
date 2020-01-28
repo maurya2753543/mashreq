@@ -29,6 +29,9 @@
           </mat-select>
         </mat-form-field>
       </div>
+      <div class="formCol checkClass" >
+        <mat-checkbox [(ngModel)]="form.IsSearchable" [disabled]="action == 'view'">Is Searchable?</mat-checkbox>
+      </div>
 
       <div class="formCol" *ngIf="action == 'add'">
         <button mat-icon-button *ngIf="lastItem" (click)="onNewField()" color="primary" >

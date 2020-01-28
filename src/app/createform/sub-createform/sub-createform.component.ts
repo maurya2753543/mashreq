@@ -40,7 +40,8 @@ if (event.value === 'nested') {
     obj.children.push({
     key: '',
     type: '',
-    children: []
+    children: [],
+    IsSearchable: false
   });
 }
 
@@ -50,7 +51,8 @@ onNewField() {
   this.forms.push({
     FieldName: '',
     DataType: '',
-    children: []
+    children: [],
+    IsSearchable: false
 
   });
 

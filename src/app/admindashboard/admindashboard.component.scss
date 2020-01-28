@@ -15,10 +15,15 @@
 .column {
   padding: 8px;
   flex: 20%;
+  max-width: 20%;
 }
 
 .createdatabase {
   background-color: coral;
   color: #fff;
 
+}
+
+.mat-card {
+  cursor: pointer;
 }
