@@ -2,21 +2,22 @@
   <div class="formGroup" *ngFor="let form of forms; let lastItem = last, let formIndex = index;">
     <div class="formRow">
       <div class="formCol">
-        <mat-form-field appearance="outline" >
-          <mat-label>Field Name</mat-label>
+        <mat-form-field appearance="outline" color="primary" >
+          <mat-label class="lable1">Field Name</mat-label>
           <input
             matInput
             placeholder="Typing...."
             [(ngModel)]="form.FieldName"
             autocomplete="off"
             [disabled]="action == 'view'"
+
           />
         </mat-form-field>
       </div>
 
       <div class="formCol">
-        <mat-form-field appearance="outline">
-          <mat-label>Data Type</mat-label>
+        <mat-form-field appearance="outline" color="primary" >
+          <mat-label class="lable1">Data Type</mat-label>
           <mat-select
             [(ngModel)]="form.DataType"
             (selectionChange)="onTypeSelection($event, form)"

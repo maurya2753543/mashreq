@@ -28,7 +28,7 @@ export class SubCreateformComponent implements OnInit {
     {key: 'binary'  , value : 'Binary'},
     {key: 'float'  , value : 'Float'},
     {key: 'double'  , value : 'Double'},
-    {key: 'search'  , value : 'Search'}
+    {key: 'search_as_you_type'  , value : 'Search'}
 
 
   ];

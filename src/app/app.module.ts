@@ -13,6 +13,7 @@ import { ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SubCreateformComponent } from './createform/sub-createform/sub-createform.component';
 import {SubmissionService} from './submission.service';
+import { httpInteceptProviders } from './http-interceptors';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import {SubmissionService} from './submission.service';
 
   ],
 
-  providers: [SubmissionService ] ,
+  providers: [SubmissionService , httpInteceptProviders] ,
   entryComponents: [DialogComponent, CreateformComponent],
   bootstrap: [AppComponent]
 })

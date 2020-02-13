@@ -3,7 +3,11 @@
   display: flex;
   flex: 100%;
   flex-wrap: wrap;
+  box-shadow: none !important;
+
+
 }
+
 * {
   max-width: 100%;
   box-sizing: border-box;
@@ -24,6 +28,8 @@
 
 }
 
-.mat-card {
+.mat-card{
   cursor: pointer;
+  outline-style: solid;
+
 }

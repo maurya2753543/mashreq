@@ -1,3 +1,4 @@
+
 .btn-success {
   background-color: #0095d2;
   text-align: center;
@@ -20,6 +21,9 @@
   margin-right: 16px;
 
 }
+.lable1{
+  color: #505050;
+}
 .Remove-button {
 
   background-color: #ff0000;
@@ -30,6 +34,7 @@
   margin-left: 16px;
 
 }
+
 .formGroup{
 
   margin-left: 32px;
@@ -39,10 +44,22 @@
   color: black;
 }
 
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  color: black;
-}
 .checkClass {
   padding-top: 12px;
   font-size: 13px;
 }
+
+.formCol::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  color: rgba(0,0,0,.4);
+}
+
+.formCol::ng-deep .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after,
+.formCol::ng-deep .mat-input-element:disabled,
+.formCol::ng-deep .mat-select-disabled .mat-select-value,
+.formCol::ng-deep .mat-checkbox-disabled .mat-checkbox-label
+
+{
+  color: rgba(0,0,0,0.8);
+}
+
+

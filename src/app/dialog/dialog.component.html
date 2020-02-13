@@ -1,3 +1,4 @@
+<mat-card>
 <h1 mat-dialog-title>Create New Index</h1>
 <div  mat-dialog-content>
   <p> Create New Index</p>
@@ -9,3 +10,4 @@
   <button mat-button (click)="cancel()" class="cancel-button">cancel</button>
   <button mat-button [mat-dialog-close]="data.name"  [routerLink]="['/form', data.name, 'add']" cdkFocusInitial class="submit-button" >Submit</button>
 </div>
+</mat-card>
